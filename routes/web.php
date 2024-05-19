@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\LoginFormController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LoginFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,8 @@ Route::get('/', function () {
 
 Route::get('login', LoginFormController::class)->name('login');
 Route::post('login/check', [LoginController::class, 'authenticate'])->name('check');
+
+Route::middleware('auth')->group(function () {
+    Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('logout', LogoutController::class)->name('logout');
+});
