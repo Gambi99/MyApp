@@ -17,16 +17,15 @@ use App\Http\Controllers\LoginFormController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('login', LoginFormController::class)->name('login');
-Route::post('login/check', [LoginController::class, 'authenticate'])->name('check');
+Route::middleware('guest')->group(function () {
+    Route::get('login', LoginFormController::class)->name('login');
+    Route::post('login/check', [LoginController::class, 'authenticate'])->name('check');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
