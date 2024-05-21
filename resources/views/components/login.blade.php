@@ -1,14 +1,11 @@
 <div class="
 m-4
-{{-- flex flex-col --}}
 bg-orange-400
 container mx-auto
 ">
-    <a href="{{ route('home') }}" class="
-    bg-green-400
-    ">
-    <button class="container mx-auto w-24">Back</button>
-    </a>
+    <x-button href2="{{ route('home') }}">
+        back
+    </x-button>
 
     <form action="{{ route('check') }}" method="POST">
         @csrf
@@ -39,14 +36,10 @@ container mx-auto
             container mx-auto
             ">
         
-            <button class="
-            container mx-auto
-            bg-green-200 
-            w-24
-            m-2
-            ">
-            {{ $slot }}
-            </button>
+            <x-button>
+                enter
+            </x-button>
+            
         </div>
     </form>
 </div>
