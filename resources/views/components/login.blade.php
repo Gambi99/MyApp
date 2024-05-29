@@ -3,42 +3,25 @@ m-4
 bg-orange-400
 container mx-auto
 ">
-    <x-button href2="{{ route('home') }}">
+    <x-ui.button href="{{ route('home') }}">
         back
-    </x-button>
+    </x-ui.button>
 
     <form action="{{ route('check') }}" method="POST">
         @csrf
 
-        <div class="
-        flex flex-col
-        ">
-            <input type="text" name="login" placeholder="login" class="
-            m-4
-            w-80
-            rounded
-            border-2 
-            border-solid 
-            border-sky-500
-            container mx-auto
-            ">
+        <div class="flex flex-col">
+
+            <x-ui.input type="text" name="login" placeholder="login" />
             @error('login')
                 {{ $message }}
             @enderror
                 
-            <input type="password" name="password" placeholder="password" class="
-            m-4
-            w-80
-            rounded
-            border-2 
-            border-solid 
-            border-sky-500
-            container mx-auto
-            ">
+            <x-ui.input type="password" name="password" placeholder="password" />
         
-            <x-button>
-                enter
-            </x-button>
+            <x-ui.button>
+                welcome
+            </x-ui.button>
             
         </div>
     </form>

@@ -1,12 +1,15 @@
 <div>
+
     <x-navbar>
 
-        <x-button href2="{{ route('logout') }}">
+        <x-ui.button href="{{ route('logout') }}">
             log out
-        </x-button>
+        </x-ui.button>
 
-        <x-button href2="#">
-            create
-        </x-button>
+        <x-ui.button href="#">
+            mission
+        </x-ui.button>
     </x-navbar>
+    <x-table :missions="$missions" />
+
 </div>

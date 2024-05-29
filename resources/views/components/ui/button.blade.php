@@ -1,5 +1,4 @@
-
-<a href="{{ $href1 }}">
+<a href="{{ $href }}">
     <button class="
     px-4 m-2
     bg-green-200 

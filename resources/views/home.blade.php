@@ -4,14 +4,14 @@
             $link = (Auth::check()) ? 'logout' : 'login'
         @endphp
         
-        <x-button href2="{{ route($link) }}">
+        <x-ui.button href="{{ route($link) }}">
             {{ $link }}
-        </x-button>
+        </x-ui.button>
 
         @auth
-            <x-button href2="{{ route('dashboard') }}">
+            <x-ui.button href="{{ route('dashboard') }}">
                 dashboard
-            </x-button>
+            </x-ui.button>
         @endauth
 
     </x-navbar>

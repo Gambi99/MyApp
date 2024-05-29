@@ -6,15 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Button extends Component
+class CreateMission extends Component
 {
-    public $href1;
     /**
      * Create a new component instance.
      */
-    public function __construct($href2 = null)
+    public function __construct()
     {
-        $this->href1 = $href2;
+        //
     }
 
     /**
@@ -22,6 +21,6 @@ class Button extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.button');
+        return view('components.create-mission');
     }
 }

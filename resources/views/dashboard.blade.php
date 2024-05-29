@@ -1,3 +1,5 @@
 <x-layout>
-    <x-dashboard />
+
+    <x-dashboard :missions="$missions" />
+
 </x-layout>

@@ -1,5 +1,3 @@
-{{-- class="{{ $attr1 }}" --}}
-
 <div class="
 flex flex-row-reverse
 container mx-auto

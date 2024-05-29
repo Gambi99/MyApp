@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Dashboard extends Component
+class Table extends Component
 {
     public $missions;
 
@@ -18,6 +18,6 @@ class Dashboard extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.dashboard');
+        return view('components.table');
     }
 }
